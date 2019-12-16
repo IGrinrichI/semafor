@@ -3,7 +3,7 @@ const sendButton = document.getElementById("send");
 const messageInput = document.getElementById("message");
 
 // Создание WebSocket. Открытие соединения
-const socket = new WebSocket("ws://localhost:8080/greeting");
+const socket = new WebSocket(`ws://${window.location.host}/greetings`);
 socket.binaryType = "arraybuffer";
 
 // Обработчик открытия соединения
